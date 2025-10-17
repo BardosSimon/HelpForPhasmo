@@ -1,0 +1,24 @@
+Name,Evidence1,Evidence2,Evidence3,Speed,Aggressiveness,Special Traits,ForcedEvidence,HowToTest
+Spirit,EMF Level 5,Spirit Box,Ghost Writing,Normal,Medium,None,None,Use smudge sticks to delay hunts longer than other ghosts.
+Wraith,EMF Level 5,Spirit Box,D.O.T.S,Fast,Aggressive,Can teleport to players,None,Step in salt: Wraiths never leave footprints in UV light.
+Phantom,Spirit Box,Fingerprints,D.O.T.S,Slow,Calm,Disappears when photo taken,None,Take a photo while it manifests — it disappears immediately.
+Poltergeist,Spirit Box,Fingerprints,Ghost Writing,Normal,Aggressive,Throws many objects,None,Place many items around; Poltergeist throws multiple at once.
+Banshee,Fingerprints,Orbs,D.O.T.S,Normal,Medium,Targets one player,None,Listen with parabolic mic — Banshee screams are unique.
+Jinn,EMF Level 5,Fingerprints,Freezing Temps,Fast,Medium,Faster with power on,None,Turn off the breaker and compare its chase speed.
+Mare,Spirit Box,Orbs,Ghost Writing,Normal,Medium,More active in dark,None,Turn on lights — Mares hate light and are less active.
+Revenant,Orbs,Ghost Writing,Freezing Temps,Slow→Fast,Aggressive,Extremely fast during hunts if chasing,None,Hide and watch its speed change drastically when chasing.
+Shade,EMF Level 5,Ghost Writing,Freezing Temps,Normal,Calm,Less active when players nearby,None,Stay together — Shades rarely appear or hunt with multiple players near.
+Demon,Fingerprints,Ghost Writing,Freezing Temps,Fast,Very Aggressive,Hunts more often,None,Test crucifix — Demons ignore the normal cooldown between hunts.
+Yurei,Orbs,Freezing Temps,D.O.T.S,Normal,Medium,Drains sanity faster,None,Close doors and use smudge — it stops sanity drain temporarily.
+Oni,EMF Level 5,Freezing Temps,D.O.T.S,Fast,Aggressive,More visible during hunts,None,Note visible form — Oni appear more frequently and throw objects hard.
+Hantu,Fingerprints,Orbs,Freezing Temps,Variable,Medium,Faster in cold areas,None,Turn on breaker — compare speed in warm vs cold rooms.
+Goryo,EMF Level 5,Fingerprints,D.O.T.S,Normal,Medium,Only visible through camera,None,Watch D.O.T.S through camera only, not with eyes.
+Myling,EMF Level 5,Fingerprints,Ghost Writing,Normal,Medium,Quieter during hunts,None,During hunts, listen — footsteps are quieter.
+Onryo,Spirit Box,Orbs,Freezing Temps,Normal,Aggressive,Hunts triggered by candles,None,Place candles — each extinguished flame risks a hunt.
+The Twins,EMF Level 5,Spirit Box,Freezing Temps,Fast+Slow,Aggressive,Two entities act separately,None,Detect different EMF readings in two rooms.
+Raiju,EMF Level 5,Orbs,D.O.T.S,Fast,Medium,Faster near electronics,None,Turn off devices — Raiju speeds up around electronics.
+Obake,EMF Level 5,Fingerprints,Orbs,Normal,Medium,Unique fingerprint patterns,Fingerprints,Watch UV — sometimes leaves six-finger prints.
+The Mimic,Spirit Box,Fingerprints,Freezing Temps,Variable,Variable,Always shows extra ghost orb,Ghost Orbs,Check for 4th evidence — always shows fake orbs.
+Moroi,Spirit Box,Ghost Writing,Freezing Temps,Fast,Very Aggressive,Weakens with smudge,None,Use smudge — it temporarily weakens it; watch speed drop.
+Deogen,Spirit Box,Ghost Writing,D.O.T.S,Variable,Very Aggressive,Knows your location always,None,Hear heavy breathing — moves slow but knows your exact spot.
+Thaye,Orbs,Ghost Writing,D.O.T.S,Fast→Slow,Medium,Ages over time (less active),None,Stay long — activity and speed drop the longer you’re in the area.
