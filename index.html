@@ -12,6 +12,7 @@
   <div class="container">
     <h1>PhasmoHelper 👻</h1>
 
+    <!-- 🧩 Evidence and Trait Filters -->
     <section class="filters">
       <h2>Evidences</h2>
       <div id="evidenceList" class="checkbox-grid"></div>
@@ -20,12 +21,34 @@
       <div id="traitsList" class="checkbox-grid"></div>
     </section>
 
+    <!-- 👻 Ghost Results -->
     <section class="results">
       <h2>Possible Ghosts</h2>
       <div id="ghostList" class="ghost-list"></div>
     </section>
+
+    <!-- 🤖 AI Helper -->
+    <section class="ai-helper">
+      <h2>AI Helper 🧩</h2>
+      <div id="aiAdvice" class="ai-advice">
+        Select two evidences to get tailored testing advice.
+      </div>
+    </section>
+
+    <!-- ⏱️ Ghost Testing Tools -->
+    <section class="tools">
+      <h2>Ghost Testing Tools</h2>
+      <div class="timer-section">
+        <button onclick="startTimer('smudge')">Start Smudge Timer (3 min)</button>
+        <button onclick="startTimer('crucifix')">Start Crucifix Timer (1 min)</button>
+        <button onclick="startTimer('demon')">Start Demon Timer (20 sec)</button>
+        <button onclick="resetTimer()">Reset</button>
+        <div id="timerDisplay" class="timer-display">00:00</div>
+      </div>
+    </section>
   </div>
 
+  <!-- External JS -->
   <script src="script.js"></script>
 </body>
 </html>

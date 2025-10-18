@@ -125,3 +125,51 @@ function toggleDetails(card, ghost) {
 }
 
 loadCSV();
+
+
+// =======================
+// 🕒 TIMER SYSTEM
+// =======================
+let timerInterval = null;
+let remainingTime = 0;
+
+function startTimer(type) {
+  resetTimer(); // clear any existing timer first
+  const timerDisplay = document.getElementById("timerDisplay");
+
+  // set time based on timer type
+  if (type === "smudge") remainingTime = 180;     // 3 minutes
+  if (type === "crucifix") remainingTime = 60;    // 1 minute
+  if (type === "demon") remainingTime = 20;       // 20 seconds
+
+  updateTimerDisplay(remainingTime);
+
+  timerInterval = setInterval(() => {
+    remainingTime--;
+    updateTimerDisplay(remainingTime);
+
+    if (remainingTime <= 0) {
+      clearInterval(timerInterval);
+      timerInterval = null;
+      timerDisplay.textContent = "⏰ Time’s up!";
+      timerDisplay.style.color = "#f87171";
+    }
+  }, 1000);
+}
+
+function resetTimer() {
+  clearInterval(timerInterval);
+  timerInterval = null;
+  remainingTime = 0;
+  const timerDisplay = document.getElementById("timerDisplay");
+  timerDisplay.textContent = "00:00";
+  timerDisplay.style.color = "#e5e7eb";
+}
+
+function updateTimerDisplay(seconds) {
+  const timerDisplay = document.getElementById("timerDisplay");
+  const mins = Math.floor(seconds / 60);
+  const secs = seconds % 60;
+  timerDisplay.textContent =
+    `${String(mins).padStart(2, "0")}:${String(secs).padStart(2, "0")}`;
+}
