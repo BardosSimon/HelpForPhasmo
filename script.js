@@ -173,3 +173,55 @@ function updateTimerDisplay(seconds) {
   timerDisplay.textContent =
     `${String(mins).padStart(2, "0")}:${String(secs).padStart(2, "0")}`;
 }
+
+async function askAI() {
+    const question = document.getElementById("userQuestion").value;
+    const answerDiv = document.getElementById("aiAnswer");
+    answerDiv.innerHTML = "Thinking...";
+
+    // Collect selected evidences
+    const selectedEvidences = [...evidences].join(", ") || "None selected";
+
+    // Collect matched ghosts (optional but powerful!)
+    const possibleGhosts = ghosts
+        .filter(g => {
+            const gE = [g.Evidence1, g.Evidence2, g.Evidence3];
+            return [...evidences].every(e => gE.includes(e));
+        })
+        .map(g => g.Name)
+        .join(", ") || "All ghosts still possible";
+
+    const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization": "Bearer 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"
+        },
+        body: JSON.stringify({
+            model: "llama-3.1-8b-instant",
+            messages: [
+                {
+                    role: "system",
+                    content:
+                        "You are a Phasmophobia assistant. Keep all answers short, direct, and precise. Do not use formatting, symbols, markdown, or decorative text. if you have evidences checked in try to write tests for possible ghosts!" +
+                        "\nCurrent evidence selected by the user: " + selectedEvidences +
+                        "\nGhosts that match the user’s evidence: " + possibleGhosts +
+                        "\nOnly answer using these constraints. If evidence eliminates ghosts, do not mention impossible ghosts."
+                },
+                {
+                    role: "user",
+                    content: question
+                }
+            ]
+        })
+    });
+
+    const data = await response.json();
+
+    if (data.error) {
+        answerDiv.innerHTML = "Error: " + data.error.message;
+        return;
+    }
+
+    answerDiv.innerHTML = data.choices?.[0]?.message?.content || "No response from AI.";
+}

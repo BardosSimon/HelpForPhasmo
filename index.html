@@ -30,9 +30,12 @@
     <!-- 🤖 AI Helper -->
     <section class="ai-helper">
       <h2>AI Helper 🧩</h2>
-      <div id="aiAdvice" class="ai-advice">
-        Select two evidences to get tailored testing advice.
-      </div>
+        <div id="ai-chat" class="ai-container">
+          <h2>Phasmophobia AI Helper</h2>
+          <textarea id="userQuestion" placeholder="Ask something like: How do I test for a Myling?"></textarea>
+          <button onclick="askAI()">Ask</button>
+          <div id="aiAnswer"></div>
+        </div>
     </section>
 
     <!-- ⏱️ Ghost Testing Tools -->
